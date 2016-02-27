@@ -107,13 +107,35 @@ SWIFT_CLASS("_TtC27Polytechnic_Playing_Machine11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIButton;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC27Polytechnic_Playing_Machine14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified display4;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified display3;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified display2;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified display1;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified playerName;
+@property (nonatomic) NSInteger random3;
+@property (nonatomic) NSInteger random2;
+@property (nonatomic) NSInteger random1;
+@property (nonatomic) NSInteger display_one;
+@property (nonatomic) NSInteger display_two;
+@property (nonatomic) NSInteger display_three;
+@property (nonatomic) NSInteger display_four;
+@property (nonatomic) BOOL checkNumberButtonPressed;
 - (void)viewDidLoad;
-- (void)didReceiveMemoryWarning;
+- (IBAction)insertAt4:(UIButton * __nonnull)sender;
+- (IBAction)insertAt3:(UIButton * __nonnull)sender;
+- (IBAction)insertAt2:(UIButton * __nonnull)sender;
+- (IBAction)insertAt1:(UIButton * __nonnull)sender;
+- (IBAction)skipTapped:(UIButton * __nonnull)sender;
+- (IBAction)addTapped:(UIButton * __nonnull)sender;
+- (IBAction)replaceTapped:(UIButton * __nonnull)sender;
+- (IBAction)checkDigitsTapped:(UIButton * __nonnull)sender;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
