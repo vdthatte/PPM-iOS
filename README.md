@@ -3,7 +3,7 @@
 Replicating a game chip on an app over the weekend. Let the hacking begin!
 
 ### Overall Specs
-> Generate a raondom number( 0 to 9 ) for each player <br> 
+> * Generate a raondom number( 0 to 9 ) for each player <br> 
 > Skip play - no pints detected<br>
 > Allow players to see the next 2 random digits<br>
 > Either play by adding or overwrite on the existing number<br>
