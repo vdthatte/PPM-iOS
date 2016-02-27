@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Polytechnic Playing Machine.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>C26E1F9E1C81204500921110</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C26E1FB21C81204600921110</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C26E1FBD1C81204600921110</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
