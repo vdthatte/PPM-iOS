@@ -127,6 +127,7 @@ SWIFT_CLASS("_TtC27Polytechnic_Playing_Machine14ViewController")
 @property (nonatomic) NSInteger display_three;
 @property (nonatomic) NSInteger display_four;
 @property (nonatomic) BOOL checkNumberButtonPressed;
+@property (nonatomic) BOOL isScoreButtonPressed;
 - (void)viewDidLoad;
 - (IBAction)insertAt4:(UIButton * __nonnull)sender;
 - (IBAction)insertAt3:(UIButton * __nonnull)sender;
@@ -136,6 +137,10 @@ SWIFT_CLASS("_TtC27Polytechnic_Playing_Machine14ViewController")
 - (IBAction)addTapped:(UIButton * __nonnull)sender;
 - (IBAction)replaceTapped:(UIButton * __nonnull)sender;
 - (IBAction)checkDigitsTapped:(UIButton * __nonnull)sender;
+- (IBAction)showScoreTapped:(UIButton * __nonnull)sender;
+- (NSInteger)checkAdjacency:(NSInteger)digit1 digit2:(NSInteger)digit2 digit3:(NSInteger)digit3 digit4:(NSInteger)digit4;
+- (NSInteger)randomProcessed;
+- (void)updateDisplay;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

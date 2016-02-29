@@ -108,6 +108,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsW-Nu-xJb">
                                 <rect key="frame" x="281" y="327" width="77" height="100"/>
                                 <state key="normal" title="SCORE"/>
+                                <connections>
+                                    <action selector="showScoreTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ctm-w2-Hao"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ug-vf-cg8">
                                 <rect key="frame" x="281" y="435" width="77" height="157"/>
