@@ -63,6 +63,7 @@ class ViewController: UIViewController {
     
     
     let user = Player()
+    let machine = Player()
     
     var random3 = 0
     var random2 = 0
@@ -79,14 +80,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        if(user.playing == true){
+
             user.digit1 = randomProcessed()
             user.digit2 = randomProcessed()
             user.digit3 = randomProcessed()
             playerName.text = "Your turn! next digit: \(user.digit1)"
             
-        }
+            machine.digit1 = randomProcessed()
+            machine.digit2 = randomProcessed()
+            machine.digit3 = randomProcessed()
+        
 
     }
     
@@ -105,10 +108,16 @@ class ViewController: UIViewController {
             
             }
         }
-
+        
+        // switch user
+        if(checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four) == 0){
+            
+        }
+        
         user.score += checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four)
         
         updateDisplay()
+        updateRandomDigits()
 
     }
     
@@ -127,9 +136,16 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+        // switch user
+        if(checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four) == 0){
+            
+        }
+        
         user.score += checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four)
         
         updateDisplay()
+        updateRandomDigits()
 
     }
     
@@ -148,9 +164,16 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+        // switch user
+        if(checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four) == 0){
+            
+        }
+        
         user.score += checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four)
         
         updateDisplay()
+        updateRandomDigits()
 
     }
     
@@ -184,9 +207,16 @@ class ViewController: UIViewController {
                 
             }
         }
+        
+        // switch user
+        if(checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four) == 0){
+            
+        }
+        
         user.score += checkAdjacency(display_one, digit2: display_two, digit3: display_three, digit4: display_four)
         
         updateDisplay()
+        updateRandomDigits()
 
     }
     
@@ -233,19 +263,37 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showScoreTapped(sender: UIButton) {
-        if(isScoreButtonPressed){
-            isScoreButtonPressed = false
-            display1.text = String(user.one)
-            display2.text = String(user.two)
-            display3.text = String(user.three)
-            display4.text = String(user.four)
+        if(user.playing){
+            if(isScoreButtonPressed){
+                isScoreButtonPressed = false
+                display1.text = String(user.one)
+                display2.text = String(user.two)
+                display3.text = String(user.three)
+                display4.text = String(user.four)
+            }
+            else{
+                display4.text = String(user.score)
+                display3.text = "0"
+                display2.text = "0"
+                display1.text = "0"
+                isScoreButtonPressed = true
+            }
         }
         else{
-            display4.text = String(user.score)
-            display3.text = "0"
-            display2.text = "0"
-            display1.text = "0"
-            isScoreButtonPressed = true
+            if(isScoreButtonPressed){
+                isScoreButtonPressed = false
+                display1.text = String(machine.one)
+                display2.text = String(machine.two)
+                display3.text = String(machine.three)
+                display4.text = String(machine.four)
+            }
+            else{
+                display4.text = String(machine.score)
+                display3.text = "0"
+                display2.text = "0"
+                display1.text = "0"
+                isScoreButtonPressed = true
+            }
         }
     }
     
@@ -318,11 +366,44 @@ class ViewController: UIViewController {
     }
 
     func updateDisplay(){
-        print(user.score)
-        user.one = Int(display1.text!)!
-        user.two = Int(display2.text!)!
-        user.three = Int(display3.text!)!
-        user.four = Int(display4.text!)!
+        if(user.playing){
+            user.one = Int(display1.text!)!
+            user.two = Int(display2.text!)!
+            user.three = Int(display3.text!)!
+            user.four = Int(display4.text!)!
+        }
+        else{
+            machine.one = Int(display1.text!)!
+            machine.two = Int(display2.text!)!
+            machine.three = Int(display3.text!)!
+            machine.four = Int(display4.text!)!
+        }
+        
+    }
+    
+    func updateRandomDigits(){
+        if(user.playing){
+            user.digit1 = user.digit2
+            user.digit2 = user.digit3
+            user.digit3 = randomProcessed()
+            playerName.text = "Your turn! next digit: \(user.digit1)"
+        }
+        else{
+            machine.digit1 = user.digit2
+            machine.digit2 = user.digit3
+            machine.digit3 = randomProcessed()
+            playerName.text = "Your turn! next digit: \(user.digit1)"
+        }
+    }
+    
+    func machinePlay(){
+        
+        machine.one = machine.digit1
+        updateDisplay()
+        updateRandomDigits()
+        machine.playing = false
+        user.playing = true
+        
     }
 }
 

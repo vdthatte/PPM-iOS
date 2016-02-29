@@ -9,52 +9,53 @@ provides-member:
 - ["C27Polytechnic_Playing_Machine6Player", ""]
 - ["C27Polytechnic_Playing_Machine14ViewController", ""]
 provides-dynamic-lookup:
-- "display3"
-- "isScoreButtonPressed"
-- "skipTapped"
-- "checkAdjacency"
-- "playerName"
-- "random2"
-- "viewDidLoad"
-- "insertAt1"
-- "addTapped"
-- "display_three"
 - "random1"
+- "updateDisplay"
+- "checkAdjacency"
+- "viewDidLoad"
+- "checkDigitsTapped"
+- "insertAt1"
+- "showScoreTapped"
+- "display_three"
+- "display4"
+- "random2"
+- "replaceTapped"
 - "insertAt4"
 - "display2"
 - "insertAt3"
-- "showScoreTapped"
-- "insertAt2"
-- "updateDisplay"
-- "display4"
-- "display_one"
-- "display_four"
-- "checkDigitsTapped"
-- "randomProcessed"
-- "replaceTapped"
-- "display1"
+- "playerName"
 - "display_two"
+- "machinePlay"
+- "insertAt2"
+- "display3"
 - "random3"
 - "checkNumberButtonPressed"
+- "isScoreButtonPressed"
+- "display_one"
+- "skipTapped"
+- "updateRandomDigits"
+- "randomProcessed"
+- "display_four"
+- "addTapped"
+- "display1"
 depends-top-level:
-- !private "StringLiteralType"
-- !private "+="
 - !private "UnicodeScalarType"
-- "ViewController"
-- !private "=="
-- "IntegerLiteralType"
-- !private "arc4random_uniform"
-- "UIButton"
-- "Int"
-- !private "String"
-- "BooleanLiteralType"
-- "FloatLiteralType"
-- "UIViewController"
-- !private "!="
-- "UILabel"
 - !private "*"
-- !private "print"
+- !private "arc4random_uniform"
+- "FloatLiteralType"
+- "BooleanLiteralType"
+- "Int"
+- "ViewController"
 - "Player"
+- !private "!="
+- !private "+="
+- "IntegerLiteralType"
+- "UIViewController"
+- "UIButton"
+- !private "=="
+- !private "StringLiteralType"
+- !private "String"
+- "UILabel"
 depends-member:
 - !private ["PSs9AnyObject", "Int"]
 - ["PSs9AnyObject", "Player"]
@@ -83,10 +84,11 @@ depends-member:
 - ["PSs9AnyObject", "insertAt3"]
 - ["PSs9AnyObject", "insertAt4"]
 - ["PSs9AnyObject", "isScoreButtonPressed"]
+- ["PSs9AnyObject", "machine"]
+- ["PSs9AnyObject", "machinePlay"]
 - !private ["PSs9AnyObject", "one"]
 - ["PSs9AnyObject", "playerName"]
 - !private ["PSs9AnyObject", "playing"]
-- !private ["PSs9AnyObject", "print"]
 - ["PSs9AnyObject", "random1"]
 - ["PSs9AnyObject", "random2"]
 - ["PSs9AnyObject", "random3"]
@@ -100,6 +102,7 @@ depends-member:
 - !private ["PSs9AnyObject", "three"]
 - !private ["PSs9AnyObject", "two"]
 - ["PSs9AnyObject", "updateDisplay"]
+- ["PSs9AnyObject", "updateRandomDigits"]
 - ["PSs9AnyObject", "user"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", ""]
@@ -134,8 +137,9 @@ depends-member:
 - ["PSs11CVarArgType", "insertAt3"]
 - ["PSs11CVarArgType", "insertAt4"]
 - ["PSs11CVarArgType", "isScoreButtonPressed"]
+- ["PSs11CVarArgType", "machine"]
+- ["PSs11CVarArgType", "machinePlay"]
 - ["PSs11CVarArgType", "playerName"]
-- !private ["PSs11CVarArgType", "print"]
 - ["PSs11CVarArgType", "random1"]
 - ["PSs11CVarArgType", "random2"]
 - ["PSs11CVarArgType", "random3"]
@@ -145,6 +149,7 @@ depends-member:
 - ["PSs11CVarArgType", "skipTapped"]
 - !private ["PSs11CVarArgType", "text"]
 - ["PSs11CVarArgType", "updateDisplay"]
+- ["PSs11CVarArgType", "updateRandomDigits"]
 - ["PSs11CVarArgType", "user"]
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", ""]
@@ -176,8 +181,9 @@ depends-member:
 - ["PSs23CustomStringConvertible", "insertAt3"]
 - ["PSs23CustomStringConvertible", "insertAt4"]
 - ["PSs23CustomStringConvertible", "isScoreButtonPressed"]
+- ["PSs23CustomStringConvertible", "machine"]
+- ["PSs23CustomStringConvertible", "machinePlay"]
 - ["PSs23CustomStringConvertible", "playerName"]
-- !private ["PSs23CustomStringConvertible", "print"]
 - ["PSs23CustomStringConvertible", "random1"]
 - ["PSs23CustomStringConvertible", "random2"]
 - ["PSs23CustomStringConvertible", "random3"]
@@ -187,6 +193,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "skipTapped"]
 - !private ["PSs23CustomStringConvertible", "text"]
 - ["PSs23CustomStringConvertible", "updateDisplay"]
+- ["PSs23CustomStringConvertible", "updateRandomDigits"]
 - ["PSs23CustomStringConvertible", "user"]
 - ["PSs23CustomStringConvertible", "viewDidLoad"]
 - ["PSs23CustomStringConvertible", ""]
@@ -215,8 +222,9 @@ depends-member:
 - ["PSs9Equatable", "insertAt3"]
 - ["PSs9Equatable", "insertAt4"]
 - ["PSs9Equatable", "isScoreButtonPressed"]
+- ["PSs9Equatable", "machine"]
+- ["PSs9Equatable", "machinePlay"]
 - ["PSs9Equatable", "playerName"]
-- !private ["PSs9Equatable", "print"]
 - ["PSs9Equatable", "random1"]
 - ["PSs9Equatable", "random2"]
 - ["PSs9Equatable", "random3"]
@@ -226,6 +234,7 @@ depends-member:
 - ["PSs9Equatable", "skipTapped"]
 - !private ["PSs9Equatable", "text"]
 - ["PSs9Equatable", "updateDisplay"]
+- ["PSs9Equatable", "updateRandomDigits"]
 - ["PSs9Equatable", "user"]
 - ["PSs9Equatable", "viewDidLoad"]
 - ["PSs9Equatable", ""]
@@ -257,8 +266,9 @@ depends-member:
 - ["PSs8Hashable", "insertAt3"]
 - ["PSs8Hashable", "insertAt4"]
 - ["PSs8Hashable", "isScoreButtonPressed"]
+- ["PSs8Hashable", "machine"]
+- ["PSs8Hashable", "machinePlay"]
 - ["PSs8Hashable", "playerName"]
-- !private ["PSs8Hashable", "print"]
 - ["PSs8Hashable", "random1"]
 - ["PSs8Hashable", "random2"]
 - ["PSs8Hashable", "random3"]
@@ -268,6 +278,7 @@ depends-member:
 - ["PSs8Hashable", "skipTapped"]
 - !private ["PSs8Hashable", "text"]
 - ["PSs8Hashable", "updateDisplay"]
+- ["PSs8Hashable", "updateRandomDigits"]
 - ["PSs8Hashable", "user"]
 - ["PSs8Hashable", "viewDidLoad"]
 - ["PSs8Hashable", ""]
@@ -309,8 +320,9 @@ depends-member:
 - ["PSo8NSCoding", "insertAt3"]
 - ["PSo8NSCoding", "insertAt4"]
 - ["PSo8NSCoding", "isScoreButtonPressed"]
+- ["PSo8NSCoding", "machine"]
+- ["PSo8NSCoding", "machinePlay"]
 - ["PSo8NSCoding", "playerName"]
-- !private ["PSo8NSCoding", "print"]
 - ["PSo8NSCoding", "random1"]
 - ["PSo8NSCoding", "random2"]
 - ["PSo8NSCoding", "random3"]
@@ -320,6 +332,7 @@ depends-member:
 - ["PSo8NSCoding", "skipTapped"]
 - !private ["PSo8NSCoding", "text"]
 - ["PSo8NSCoding", "updateDisplay"]
+- ["PSo8NSCoding", "updateRandomDigits"]
 - ["PSo8NSCoding", "user"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
@@ -346,8 +359,9 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "insertAt3"]
 - ["PSo26NSExtensionRequestHandling", "insertAt4"]
 - ["PSo26NSExtensionRequestHandling", "isScoreButtonPressed"]
+- ["PSo26NSExtensionRequestHandling", "machine"]
+- ["PSo26NSExtensionRequestHandling", "machinePlay"]
 - ["PSo26NSExtensionRequestHandling", "playerName"]
-- !private ["PSo26NSExtensionRequestHandling", "print"]
 - ["PSo26NSExtensionRequestHandling", "random1"]
 - ["PSo26NSExtensionRequestHandling", "random2"]
 - ["PSo26NSExtensionRequestHandling", "random3"]
@@ -356,6 +370,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "showScoreTapped"]
 - ["PSo26NSExtensionRequestHandling", "skipTapped"]
 - ["PSo26NSExtensionRequestHandling", "updateDisplay"]
+- ["PSo26NSExtensionRequestHandling", "updateRandomDigits"]
 - ["PSo26NSExtensionRequestHandling", "user"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -385,8 +400,9 @@ depends-member:
 - ["CSo8NSObject", "insertAt3"]
 - ["CSo8NSObject", "insertAt4"]
 - ["CSo8NSObject", "isScoreButtonPressed"]
+- ["CSo8NSObject", "machine"]
+- ["CSo8NSObject", "machinePlay"]
 - ["CSo8NSObject", "playerName"]
-- !private ["CSo8NSObject", "print"]
 - ["CSo8NSObject", "random1"]
 - ["CSo8NSObject", "random2"]
 - ["CSo8NSObject", "random3"]
@@ -396,6 +412,7 @@ depends-member:
 - ["CSo8NSObject", "skipTapped"]
 - !private ["CSo8NSObject", "text"]
 - ["CSo8NSObject", "updateDisplay"]
+- ["CSo8NSObject", "updateRandomDigits"]
 - ["CSo8NSObject", "user"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "Int"]
@@ -420,8 +437,9 @@ depends-member:
 - ["PSo16NSObjectProtocol", "insertAt3"]
 - ["PSo16NSObjectProtocol", "insertAt4"]
 - ["PSo16NSObjectProtocol", "isScoreButtonPressed"]
+- ["PSo16NSObjectProtocol", "machine"]
+- ["PSo16NSObjectProtocol", "machinePlay"]
 - ["PSo16NSObjectProtocol", "playerName"]
-- !private ["PSo16NSObjectProtocol", "print"]
 - ["PSo16NSObjectProtocol", "random1"]
 - ["PSo16NSObjectProtocol", "random2"]
 - ["PSo16NSObjectProtocol", "random3"]
@@ -431,6 +449,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "skipTapped"]
 - !private ["PSo16NSObjectProtocol", "text"]
 - ["PSo16NSObjectProtocol", "updateDisplay"]
+- ["PSo16NSObjectProtocol", "updateRandomDigits"]
 - ["PSo16NSObjectProtocol", "user"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
@@ -487,8 +506,9 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "insertAt3"]
 - ["PSo21UIAppearanceContainer", "insertAt4"]
 - ["PSo21UIAppearanceContainer", "isScoreButtonPressed"]
+- ["PSo21UIAppearanceContainer", "machine"]
+- ["PSo21UIAppearanceContainer", "machinePlay"]
 - ["PSo21UIAppearanceContainer", "playerName"]
-- !private ["PSo21UIAppearanceContainer", "print"]
 - ["PSo21UIAppearanceContainer", "random1"]
 - ["PSo21UIAppearanceContainer", "random2"]
 - ["PSo21UIAppearanceContainer", "random3"]
@@ -498,6 +518,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "skipTapped"]
 - !private ["PSo21UIAppearanceContainer", "text"]
 - ["PSo21UIAppearanceContainer", "updateDisplay"]
+- ["PSo21UIAppearanceContainer", "updateRandomDigits"]
 - ["PSo21UIAppearanceContainer", "user"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
@@ -523,8 +544,9 @@ depends-member:
 - ["PSo18UIContentContainer", "insertAt3"]
 - ["PSo18UIContentContainer", "insertAt4"]
 - ["PSo18UIContentContainer", "isScoreButtonPressed"]
+- ["PSo18UIContentContainer", "machine"]
+- ["PSo18UIContentContainer", "machinePlay"]
 - ["PSo18UIContentContainer", "playerName"]
-- !private ["PSo18UIContentContainer", "print"]
 - ["PSo18UIContentContainer", "random1"]
 - ["PSo18UIContentContainer", "random2"]
 - ["PSo18UIContentContainer", "random3"]
@@ -533,6 +555,7 @@ depends-member:
 - ["PSo18UIContentContainer", "showScoreTapped"]
 - ["PSo18UIContentContainer", "skipTapped"]
 - ["PSo18UIContentContainer", "updateDisplay"]
+- ["PSo18UIContentContainer", "updateRandomDigits"]
 - ["PSo18UIContentContainer", "user"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -560,8 +583,9 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "insertAt3"]
 - ["PSo18UIFocusEnvironment", "insertAt4"]
 - ["PSo18UIFocusEnvironment", "isScoreButtonPressed"]
+- ["PSo18UIFocusEnvironment", "machine"]
+- ["PSo18UIFocusEnvironment", "machinePlay"]
 - ["PSo18UIFocusEnvironment", "playerName"]
-- !private ["PSo18UIFocusEnvironment", "print"]
 - ["PSo18UIFocusEnvironment", "random1"]
 - ["PSo18UIFocusEnvironment", "random2"]
 - ["PSo18UIFocusEnvironment", "random3"]
@@ -571,6 +595,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "skipTapped"]
 - !private ["PSo18UIFocusEnvironment", "text"]
 - ["PSo18UIFocusEnvironment", "updateDisplay"]
+- ["PSo18UIFocusEnvironment", "updateRandomDigits"]
 - ["PSo18UIFocusEnvironment", "user"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -601,8 +626,9 @@ depends-member:
 - ["CSo11UIResponder", "insertAt3"]
 - ["CSo11UIResponder", "insertAt4"]
 - ["CSo11UIResponder", "isScoreButtonPressed"]
+- ["CSo11UIResponder", "machine"]
+- ["CSo11UIResponder", "machinePlay"]
 - ["CSo11UIResponder", "playerName"]
-- !private ["CSo11UIResponder", "print"]
 - ["CSo11UIResponder", "random1"]
 - ["CSo11UIResponder", "random2"]
 - ["CSo11UIResponder", "random3"]
@@ -612,6 +638,7 @@ depends-member:
 - ["CSo11UIResponder", "skipTapped"]
 - !private ["CSo11UIResponder", "text"]
 - ["CSo11UIResponder", "updateDisplay"]
+- ["CSo11UIResponder", "updateRandomDigits"]
 - ["CSo11UIResponder", "user"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo16UIStateRestoring", "Int"]
@@ -636,8 +663,9 @@ depends-member:
 - ["PSo16UIStateRestoring", "insertAt3"]
 - ["PSo16UIStateRestoring", "insertAt4"]
 - ["PSo16UIStateRestoring", "isScoreButtonPressed"]
+- ["PSo16UIStateRestoring", "machine"]
+- ["PSo16UIStateRestoring", "machinePlay"]
 - ["PSo16UIStateRestoring", "playerName"]
-- !private ["PSo16UIStateRestoring", "print"]
 - ["PSo16UIStateRestoring", "random1"]
 - ["PSo16UIStateRestoring", "random2"]
 - ["PSo16UIStateRestoring", "random3"]
@@ -646,6 +674,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "showScoreTapped"]
 - ["PSo16UIStateRestoring", "skipTapped"]
 - ["PSo16UIStateRestoring", "updateDisplay"]
+- ["PSo16UIStateRestoring", "updateRandomDigits"]
 - ["PSo16UIStateRestoring", "user"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
@@ -671,8 +700,9 @@ depends-member:
 - ["PSo18UITraitEnvironment", "insertAt3"]
 - ["PSo18UITraitEnvironment", "insertAt4"]
 - ["PSo18UITraitEnvironment", "isScoreButtonPressed"]
+- ["PSo18UITraitEnvironment", "machine"]
+- ["PSo18UITraitEnvironment", "machinePlay"]
 - ["PSo18UITraitEnvironment", "playerName"]
-- !private ["PSo18UITraitEnvironment", "print"]
 - ["PSo18UITraitEnvironment", "random1"]
 - ["PSo18UITraitEnvironment", "random2"]
 - ["PSo18UITraitEnvironment", "random3"]
@@ -682,6 +712,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "skipTapped"]
 - !private ["PSo18UITraitEnvironment", "text"]
 - ["PSo18UITraitEnvironment", "updateDisplay"]
+- ["PSo18UITraitEnvironment", "updateRandomDigits"]
 - ["PSo18UITraitEnvironment", "user"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
@@ -711,8 +742,9 @@ depends-member:
 - ["CSo16UIViewController", "insertAt3"]
 - ["CSo16UIViewController", "insertAt4"]
 - ["CSo16UIViewController", "isScoreButtonPressed"]
+- ["CSo16UIViewController", "machine"]
+- ["CSo16UIViewController", "machinePlay"]
 - ["CSo16UIViewController", "playerName"]
-- !private ["CSo16UIViewController", "print"]
 - ["CSo16UIViewController", "random1"]
 - ["CSo16UIViewController", "random2"]
 - ["CSo16UIViewController", "random3"]
@@ -721,6 +753,7 @@ depends-member:
 - ["CSo16UIViewController", "showScoreTapped"]
 - ["CSo16UIViewController", "skipTapped"]
 - ["CSo16UIViewController", "updateDisplay"]
+- ["CSo16UIViewController", "updateRandomDigits"]
 - ["CSo16UIViewController", "user"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
@@ -756,8 +789,9 @@ depends-member:
 - ["C27Polytechnic_Playing_Machine14ViewController", "insertAt3"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "insertAt4"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "isScoreButtonPressed"]
+- ["C27Polytechnic_Playing_Machine14ViewController", "machine"]
+- ["C27Polytechnic_Playing_Machine14ViewController", "machinePlay"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "playerName"]
-- !private ["C27Polytechnic_Playing_Machine14ViewController", "print"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "random1"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "random2"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "random3"]
@@ -766,6 +800,7 @@ depends-member:
 - ["C27Polytechnic_Playing_Machine14ViewController", "showScoreTapped"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "skipTapped"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "updateDisplay"]
+- ["C27Polytechnic_Playing_Machine14ViewController", "updateRandomDigits"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "user"]
 - ["C27Polytechnic_Playing_Machine14ViewController", "viewDidLoad"]
 - !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
@@ -888,4 +923,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "26259a95b186b9a9022d99a752da6415"
+interface-hash: "49bfdbd81d0dd5b656c47a6b6e436a65"

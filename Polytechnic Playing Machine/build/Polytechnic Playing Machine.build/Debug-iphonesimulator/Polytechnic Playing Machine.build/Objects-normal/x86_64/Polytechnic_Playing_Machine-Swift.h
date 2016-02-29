@@ -141,6 +141,8 @@ SWIFT_CLASS("_TtC27Polytechnic_Playing_Machine14ViewController")
 - (NSInteger)checkAdjacency:(NSInteger)digit1 digit2:(NSInteger)digit2 digit3:(NSInteger)digit3 digit4:(NSInteger)digit4;
 - (NSInteger)randomProcessed;
 - (void)updateDisplay;
+- (void)updateRandomDigits;
+- (void)machinePlay;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
